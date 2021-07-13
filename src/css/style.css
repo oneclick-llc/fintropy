@@ -4,12 +4,15 @@
 @import url(default.css);
 @import url(form.css);
 
-@import url(social.css);
+/* @import url(social.css); */
+@import url(menu.css);
 
 @import url(header.css);
 @import url(footer.css);
 
-/* @import url(first-screen.css);
+@import url(first-screen.css);
+
+/*
 @import url(docs.css);
 @import url(token.css);
 @import url(utilities.css);

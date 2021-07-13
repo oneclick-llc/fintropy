@@ -16,7 +16,7 @@ html {
 
 body {
 
-	color: var(--color);
+	color: #fff;
 	min-width: 320px;
 	font-size: 16px;
 	line-height: 1.5;
@@ -29,7 +29,7 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-	background-color: var(--bg);
+	background-color: var(--primary);
 
 background-image: url(/css/1.png);
 background-position: top;
@@ -37,8 +37,8 @@ background-position: top;
 
 ::selection {
 
-	color: var(--bg);
-	background-color: var(--color);
+	color: #fff;
+	background-color: var(--secondary);
 
 }
 
@@ -63,7 +63,7 @@ svg {
 
 	display: block;
 	position: relative;
-	fill: var(--color);
+	fill: var(--accentPrimary);
 	transition: var(--transitionDefault);
 
 }

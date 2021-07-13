@@ -38,39 +38,96 @@
 
 .btn {
 
-	padding: 0 24px;
-	height: 56px;
-	font-size: 15px;
-	line-height: 56px;
-	font-weight: 500;
-	border-radius: 12px;
-
-	color: var(--white);
-	background-image: var(--gradBtn);
+	padding: 0 45px;
+	height: 68px;
+	font-size: 22px;
+	line-height: 68px;
+	font-weight: 700;
+	border-radius: 34px;
 
 	@media ($desktop) {
 
 		&:hover {
 
-			background-image: linear-gradient(87.64deg, #BD4535 4.66%, #7F84B1 91.85%);
 
 		}
 
 	}
 
-	&--big {
+	&--grad {
 
-		padding: 0 62px;
-		height: 84px;
-		font-size: 21px;
-		line-height: 84px;
-		display: flex;
-		align-items: center;
+		color: #fff;
+		box-shadow: 0px 10px 22px rgba(43, 230, 255, 0.14);
 
-		svg {
+		@media ($desktop) {
 
-			margin-left: 16px;
-			fill: var(--white);
+			&:hover span::before {
+
+				transform: translateX(-40%);
+
+			}
+
+		}
+
+		span {
+
+			display: block;
+			padding-left: 32px;
+			position: relative;
+			overflow: hidden;
+			border-radius: 34px;
+			z-index: 1;
+
+			&::before {
+
+				position: absolute;
+				width: 200%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				transform: translateX(-50%);
+				content: '';
+				z-index: -1;
+				transition: transform var(--transitionDefault);
+				background-image: linear-gradient(53deg, #9E42C9 55%, var(--accentPrimary) 106%);
+
+			}
+
+		}
+
+	}
+
+	&--demo {
+
+		width: 270px;
+		padding: 0;
+
+		img {
+
+			position: absolute;
+			width: 54px;
+			height: 67px;
+			top: -14px;
+			left: 38px;
+			z-index: 2;
+
+		}
+
+	}
+
+	&--violet {
+
+		color: rgba(255, 255, 255, .8);
+		background-color: rgba(157, 96, 255, 0.5);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--secondary);
+
+			}
 
 		}
 
