@@ -1,5 +1,5 @@
 
-	<article class="roadmap">
+	<article class="roadmap" id="roadmap">
 
 		<div class="center">
 
@@ -11,21 +11,101 @@
 				Stages of the project
 			</p>
 
-			<p class="roadmap__desc fade-in">
-				Learn more about the r
-				eferral platform and start earning fees for account openings today
-			</p>
+{% set table = [
 
-			<div class="roadmap__btn fade-in fade-in--100">
+	{
+		year    : "2021",
+		quarter : "q1",
+		list    : [
+			"Project <br>Started",
+			"Concept <br>Clarified",
+			"Team Assembled",
+			"Legal and <br>Structure for <br>Token Sale"
+		]
+	},
+	{
+		year    : "2021",
+		quarter : "q2",
+		list    : [
+			"Architecture <br>& UI Design",
+			"Rinkeby <br>MVP Release",
+			"Public <br>Security <br>Audit",
+			"Legal and <br>Structure for <br>Token Sale"
+		]
+	},
+	{
+		year    : "2021",
+		quarter : "q3",
+		list    : [
+			"Token <br>Sale",
+			"Featured Asset Managers",
+			"Uniswap <br>Listing",
+			"Legal and <br>Structure for <br>Token Sale"
+		]
+	},
+	{
+		year    : "2021",
+		quarter : "q4",
+		list    : [
+			"Full-scale DAO Governance",
+			"Polkadot Parathread Integration",
+			"Top Crypto Exchanges Listing",
+			"Full-scale <br>DeFi Tools"
+		]
+	},
+	{
+		year    : "2022",
+		quarter : "q1",
+		list    : [
+			"Tokenized Stocks Integration",
+			"Gamification Features",
+			"Cross-Chain Bridge",
+			"AI Powered <br>Trading"
+		]
+	}
 
-				<a href="https://mig.finance" target="_blank" class="btn btn--big">
-					Official website
-					<svg width="12" height="12" viewBox="0 0 12 12">
-						<path d="M7.39 3.2a.5.5 0 00-.35-.86H1.66a1 1 0 010-2h8a2 2 0 012 2v8a1 1 0 11-2 0V4.96a.5.5 0 00-.86-.35l-7.04 7.05a1 1 0 01-1.42-1.42L7.4 3.2z"/>
-					</svg>
-				</a>
+] %}
+
+			<div class="roadmap__table">
+
+{% for row in table %}
+
+				<div class="roadmap__row roadmap__row--{{ row.quarter }}-{{ row.year }}">
+
+					<div class="roadmap__thead fade-in fade-in--left">
+
+						<div class="roadmap__year">
+							{{ row.year }}
+						</div>
+
+						<div class="roadmap__quarter">
+							{{ row.quarter | capitalize }}
+						</div>
+
+					</div>
+
+					<div class="roadmap__tbody fade-in fade-in--000">
+
+	{% for item in row.list %}
+
+						<div class="roadmap__td">
+
+							<span>
+								{{ item | safe }}
+							</span>
+
+						</div>
+
+	{% endfor %}
+
+					</div>
+
+				</div>
+
+{% endfor %}
 
 			</div>
+
 		</div>
 
 	</article>
