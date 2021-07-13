@@ -175,10 +175,43 @@ img {
 
 }
 
+.hash {
+
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	color: var(--secondary);
+	margin-bottom: 26px;
+
+	&::before {
+
+		width: 39px;
+		height: 2px;
+		content: '';
+		margin-right: 8px;
+		background-color: var(--secondary);
+		border-radius: 1px;
+		position: relative;
+		top: -1px;
+
+	}
+
+}
+
 .h1 {
 
 	font-size: 80px;
 	font-weight: 700;
 	line-height: 64px;
+
+}
+
+.h2 {
+
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 56px;
 
 }

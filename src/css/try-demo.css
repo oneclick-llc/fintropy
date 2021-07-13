@@ -1,0 +1,12 @@
+.try-demo {
+
+	outline:1px solid red;
+
+	&__btn {
+
+		display: flex;
+		margin-top: 35px;
+
+	}
+
+}
