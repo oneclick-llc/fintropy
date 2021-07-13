@@ -1,0 +1,86 @@
+.visible-md,
+.visible-sm {
+
+	display: none;
+
+}
+
+.center {
+
+	margin: 0 auto;
+	width: 1120px;
+	max-width: 100%;
+	position: relative;
+
+}
+
+@media ($desktop) {
+
+
+}
+
+@media ($lgWidth) {
+
+
+}
+
+@media ($mdWidth) {
+
+	.hidden-md {
+
+		display: none !important;
+
+	}
+
+	.visible-md {
+
+		display: block;
+
+	}
+
+	.center {
+
+		width: 960px;
+		padding: 0 var(--indent);
+
+	}
+
+}
+
+@media ($smWidth) {
+
+	:root {
+
+		--indent: 16px;
+
+	}
+
+	.hidden-sm {
+
+		display: none !important;
+
+	}
+
+	.visible-sm {
+
+		display: block;
+
+	}
+
+	.center {
+
+		width: 480px;
+
+	}
+
+}
+
+@media ($xsWidth) {
+
+	:root {
+
+		--indent: 10px;
+
+	}
+
+}

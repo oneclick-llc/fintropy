@@ -1,0 +1,26 @@
+
+
+@font-face {
+  font-family: 'Circle';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Circe-Bold.woff2')
+}
+
+@font-face {
+  font-family: 'Circle';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Circe-Light.woff')
+}
+
+
+@font-face {
+  font-family: 'Circle';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Circe-Regular.woff')
+}

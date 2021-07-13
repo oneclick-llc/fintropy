@@ -1,0 +1,197 @@
+.what {
+
+	padding: 53px 0;
+	margin: 100px 0;
+
+	@media ($smWidth) {
+
+		padding: 0;
+		margin: 64px 0;
+
+	}
+
+	.center {
+
+		@media ($desktop) {
+
+			width: 1158px;
+
+		}
+
+	}
+
+	&__box {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+	}
+
+	&__content {
+
+		width: 510px;
+
+		@media ($smWidth) {
+
+			width: 100%;
+
+		}
+
+	}
+
+	&__title {
+
+		font-family: 'Work Sans';
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 64px;
+		margin-bottom: 16px;
+
+		@media ($smWidth) {
+
+			font-size: 40px;
+			line-height: 50px;
+			text-align: center;
+			margin-bottom: 10px;
+
+		}
+
+		@media ($xsWidth) {
+
+			font-size: 36px;
+
+		}
+
+	}
+
+	&__logo {
+
+		display: flex;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+		&-bg {
+
+			background-image: linear-gradient(87.64deg, rgba(254, 87, 40, 0.2) 4.66%, rgba(165, 177, 220, 0.2) 91.85%);
+			background-color: #fff;
+			border-radius: 12px;
+			display: flex;
+
+			@media ($smWidth) {
+
+				display: block;
+				text-align: center;
+
+			}
+
+		}
+
+		&-text {
+
+			font-weight: 600;
+			font-family: 'RF Dewi Expanded';
+			font-size: 48px;
+			line-height: 72px;
+			padding: 6px 24px;
+
+			@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+
+				background-image: var(--grad);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+			}
+
+			@media ($mdWidth) {
+
+				font-size: 32px;
+
+			}
+
+			@media ($smWidth) {
+
+				font-size: 30px;
+				padding: 0;
+
+			}
+
+		}
+
+	}
+
+	&__text {
+
+		font-weight: 300;
+		font-size: 30px;
+		line-height: 48px;
+		opacity: 0.8;
+		max-width: 424px;
+		margin: 36px 0;
+
+		@media ($smWidth) {
+
+			margin: 40px 0 20px;
+			text-align: center;
+			font-size: 20px;
+			line-height: 26px;
+			opacity: 1;
+
+		}
+
+	}
+
+	&__note {
+
+		max-width: 424px;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 28px;
+
+		@media ($smWidth) {
+
+			text-align: center;
+			font-size: 16px;
+			line-height: 26px;
+
+		}
+
+	}
+
+	&__img {
+
+		@media ($mdWidth) {
+
+			width: 336px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin-top: 50px;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+}

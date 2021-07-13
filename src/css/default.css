@@ -1,0 +1,176 @@
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+color: red !important;
+}
+
+html {
+
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+body {
+
+	color: var(--color);
+	min-width: 320px;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Circle', sans-serif;
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: scrollbar;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	overflow-y: scroll;
+	position: relative;
+	background-color: var(--bg);
+
+background-image: url(/css/1.png);
+background-position: top;
+}
+
+::selection {
+
+	color: var(--bg);
+	background-color: var(--color);
+
+}
+
+/*
+-----------------------------------------------------------------------------*/
+.wrapper {
+
+	flex-shrink: 0;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.main {
+
+	flex-shrink: 0;
+
+}
+
+svg {
+
+	display: block;
+	position: relative;
+	fill: var(--color);
+	transition: var(--transitionDefault);
+
+}
+
+img {
+
+	display: block;
+	position: relative;
+	border: 0;
+
+}
+
+.main {
+
+	overflow: hidden;
+
+	@media ($mdWidth) {
+
+		margin-top: -512px;
+		padding-top: 512px;
+
+	}
+
+}
+
+.fade-in {
+
+	opacity: 0.001;
+	transform: translateY(40px);
+	transition: transform 1.5s cubic-bezier(.19,1,.22,1), opacity 1s cubic-bezier(.19,1,.22,1);
+	will-change: opacity, transform;
+
+	&&--left {
+
+		transform: translateX(-40px);
+
+	}
+
+	&&--right {
+
+		transform: translateX(40px);
+
+	}
+
+	&.is-show {
+
+		transform: translateY(0);
+		opacity: 1;
+
+	}
+
+	@media ($mdWidth) {
+
+		transition-delay: 0.2s;
+
+	}
+
+	@media ($desktop) {
+
+		&&--100 {
+
+			transition-delay: 0.1s;
+
+		}
+
+		&&--200 {
+
+			transition-delay: 0.2s;
+
+		}
+
+		&&--300 {
+
+			transition-delay: 0.3s;
+
+		}
+
+		&&--400 {
+
+			transition-delay: 0.4s;
+
+		}
+
+		&&--500 {
+
+			transition-delay: 0.5s;
+
+		}
+
+		&&--600 {
+
+			transition-delay: 0.6s;
+
+		}
+
+		&&--700 {
+
+			transition-delay: 0.7s;
+
+		}
+
+		&&--800 {
+
+			transition-delay: 0.8s;
+
+		}
+
+	}
+
+}

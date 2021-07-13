@@ -1,0 +1,160 @@
+.token {
+
+	position: relative;
+	padding: 16px 0;
+
+	&__title {
+
+		font-family: 'Work Sans';
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 64px;
+		text-align: center;
+		margin-bottom: 36px;
+
+		@media ($smWidth) {
+
+			font-size: 40px;
+			line-height: 50px;
+			margin-bottom: 20px;
+
+		}
+
+		@media ($xsWidth) {
+
+			font-size: 36px;
+
+		}
+
+	}
+
+	&__text {
+
+		font-weight: 300;
+		font-size: 29px;
+		line-height: 39px;
+		text-align: center;
+		margin-bottom: 60px;
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 30px;
+
+		}
+
+	}
+
+	&__list {
+
+		list-style: none;
+		display: grid;
+		column-gap: 92px;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		@media ($mdWidth) {
+
+			column-gap: var(--indent);
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+	}
+
+	&__item {
+
+		text-align: center;
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 29px;
+		color: var(--text);
+
+		.thema-white & {
+
+			color: var(--black);
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 40px;
+
+			br {
+
+				display: block;
+				margin-top: 6px;
+
+			}
+
+		}
+
+		b {
+
+			font-weight: 600;
+			display: block;
+			color: var(--color);
+
+		}
+
+		img {
+
+			margin: 24px auto;
+
+			@media ($smWidth) {
+
+				margin: 10px auto;
+				width: 80px;
+				height: 80px;
+
+			}
+
+		}
+
+		a {
+
+			text-align: center;
+			color: var(--orange);
+			text-decoration: none;
+			position: relative;
+
+			&::before {
+
+				transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+				transform: scale3d(1, 1, 1);
+				clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+				content: '';
+				background-color: var(--orange);
+
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				bottom: 0;
+				left: 0;
+				pointer-events: none;
+
+			}
+
+			@media ($desktop) {
+
+				&:hover::before {
+
+					transform-origin: 50% 100%;
+					clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

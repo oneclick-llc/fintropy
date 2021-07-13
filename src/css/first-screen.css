@@ -1,0 +1,180 @@
+.first-screen {
+
+	position: relative;
+	text-align: center;
+	padding: 220px 0 128px;
+
+	@media ($mdWidth) {
+
+		padding: 100px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		padding: 20px 0 105px;
+
+		&::before {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='1318' preserveAspectRatio='none' fill='none' viewBox='0 0 360 1318'%3E%3Cg filter='url(%23filter0_f)' opacity='.24'%3E%3Ccircle cx='363' cy='372' r='298' fill='%23E028FE'/%3E%3C/g%3E%3Cg filter='url(%23filter1_f)' opacity='.2'%3E%3Ccircle cx='-15' cy='593' r='325' fill='%23FE2828'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f' width='1396' height='1396' x='-335' y='-326' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur' stdDeviation='200'/%3E%3C/filter%3E%3Cfilter id='filter1_f' width='1450' height='1450' x='-740' y='-132' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur' stdDeviation='200'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+			background-size: 100% auto;
+			bottom: -750px;
+
+		}
+
+	}
+
+	&::before {
+
+		position: absolute;
+		top: -320px;
+		left: 0;
+		right: 0;
+		bottom: -320px;
+		content: '';
+		pointer-events: none;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2618' height='1569' fill='none' viewBox='0 0 2618 1569'%3E%3Cg filter='url(%23filter0_f)' opacity='.24'%3E%3Ccircle cx='1833.5' cy='784.5' r='384.5' fill='%23E028FE'/%3E%3C/g%3E%3Cg filter='url(%23filter1_f)' opacity='.2'%3E%3Ccircle cx='784.5' cy='784.5' r='384.5' fill='%23FE2828'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f' width='1569' height='1569' x='1049' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur' stdDeviation='200'/%3E%3C/filter%3E%3Cfilter id='filter1_f' width='1569' height='1569' x='0' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur' stdDeviation='200'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+
+	}
+
+	&__title {
+
+		font-weight: 700;
+		font-family: 'RF Dewi Expanded';
+		font-size: 76px;
+		line-height: 79px;
+		margin-bottom: 29px;
+
+		@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+
+			background-image: var(--grad);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+		}
+
+		@media ($lgWidth) {
+
+
+		}
+
+		@media ($mdWidth) {
+
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 30px;
+			line-height: 1;
+			margin-bottom: 20px;
+
+		}
+
+		@media ($xsWidth) {
+
+
+		}
+
+	}
+
+	&__desc {
+
+		font-size: 29px;
+		line-height: 39px;
+		margin-bottom: 44px;
+		font-weight: 300;
+
+		.thema-white & {
+
+
+		}
+
+		@media ($lgWidth) {
+
+
+		}
+
+		@media ($mdWidth) {
+
+			br {
+
+				display: none;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 20px;
+
+		}
+
+	}
+
+	&__scroll {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 98px;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
+
+		svg {
+
+			fill: var(--text);
+			stroke: #17163c;
+
+		}
+
+	}
+
+	&__btn {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 48px;
+
+		@media ($smWidth) {
+
+			margin-top: 40px;
+
+		}
+
+	}
+
+	canvas {
+
+		position: absolute;
+		top: 30%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		pointer-events: none;
+		background-color: var(--bg);
+
+		@media ($smWidth) {
+
+			top: 36%;
+
+		}
+
+		.thema-white & {
+
+			display: none;
+
+		}
+
+	}
+
+}
