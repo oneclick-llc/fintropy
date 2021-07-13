@@ -133,6 +133,23 @@
 
 	}
 
+	&--white {
+
+		color: var(--accentSecondary);
+		background-color: #fff;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--secondary);
+
+			}
+
+		}
+
+	}
+
 }
 
 

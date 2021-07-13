@@ -1,11 +1,63 @@
 .try-demo {
 
-	outline:1px solid red;
+	margin: 255px 0 0;
+	padding: 85px 0;
+	background-color: var(--accentSecondary);
+
+	&__box {
+
+		display: flex;
+
+	}
+
+	&__content {
+
+		margin-left: 64px;
+		width: 360px;
+		flex-shrink: 0;
+
+	}
+
+	&__img {
+
+		position: relative;
+		flex-grow: 1;
+
+		img {
+
+			position: absolute;
+			left: 0;
+			bottom: -30px;
+
+		}
+
+	}
 
 	&__btn {
 
 		display: flex;
 		margin-top: 35px;
+
+		.btn {
+
+			width: 270px;
+			padding-right: 68px;
+
+			&::after {
+
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				top: 0;
+				right: 54px;
+				bottom: 0;
+				margin: auto;
+				content: '';
+				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='13' fill='%232BE6FF' opacity='0.16'/%3E%3Ccircle cx='13' cy='13' r='7' fill='none' stroke='%232BE6FF' opacity='0.5'/%3E%3Ccircle cx='13' cy='13' r='4' fill='%232BE6FF'/%3E%3C/svg%3E%0A");
+
+			}
+
+		}
 
 	}
 
