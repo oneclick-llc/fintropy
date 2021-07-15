@@ -1,39 +1,52 @@
 .team {
 
-	padding: 90px 0 0;
+	padding: 90px 0;
 
 	&__list {
 
 		display: flex;
 		flex-wrap: wrap;
-		margin: 60px -16px -16px;
+		margin: 50px -80px 0 -40px;
 		list-style: none;
 
 	}
 
 	&__item {
 
-		margin: 16px;
-		padding: 38px 40px 48px;
-		width: calc(100% / 3 - 32px);
-		background-color: rgba(157, 96, 255, 0.26);
-		font-size: 16px;
-		border-radius: 18px;
-		line-height: 22px;
-		color: #fff;
+		margin: 45px 40px;
+		width: calc(100% / 2 - 80px);
+		outline:1px solid red;
+		display: flex;
 
 	}
 
-	&__ico {
+	&__head {
 
-		width: 72px;
-		height: 72px;
+		width: 218px;
+		margin-right: 36px;
+		flex-shrink: 0;
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+
+	}
+
+	&__photo {
+
+		width: 218px;
+		height: 218px;
+		background-image: linear-gradient(204deg, #7ba4bd 3%, rgba(113, 131, 198, 0) 117%);
+		background-color: #5a20c0;
 		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: rgba(157, 96, 255, 0.26);
-		margin-bottom: 32px;
+
+		img {
+
+			border-radius: 50%;
+
+		}
 
 	}
 
@@ -43,6 +56,60 @@
 		font-weight: 700;
 		line-height: 34px;
 		margin-bottom: 16px;
+		align-self: flex-start;
+		position: relative;
+
+	}
+
+	&__linkedin {
+
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		right: 0;
+		bottom: 0;
+		background-color: var(--secondary);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%234F208A' d='M24.85 39.19c0 .45-.36.81-.81.81h-3.48a.81.81 0 01-.81-.81V24.73c0-.45.36-.81.81-.81h3.48c.45 0 .81.36.81.8V39.2zM22.3 22.55a3.29 3.29 0 01-3.3-3.27A3.29 3.29 0 0122.3 16c1.82 0 3.3 1.47 3.3 3.28a3.29 3.29 0 01-3.3 3.27zM43 39.25c0 .42-.34.75-.75.75h-3.73a.75.75 0 01-.75-.75v-6.78c0-1.01.3-4.43-2.66-4.43-2.3 0-2.76 2.34-2.85 3.4v7.81c0 .42-.34.75-.75.75h-3.6a.75.75 0 01-.76-.75V24.66c0-.4.34-.74.75-.74h3.6c.42 0 .76.33.76.74v1.26c.85-1.26 2.11-2.24 4.8-2.24 5.97 0 5.94 5.53 5.94 8.58v7z'/%3E%3C/svg%3E");
+		border-radius: 50%;
+		font-size: 0;
+		color: transparent;
+		transition: var(--transitionDefault);
+
+		&:hover {
+
+			background-color: var(--accentSecondary);
+
+		}
+
+	}
+
+	&__status {
+
+		margin: 12px 0 14px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 26px;
+
+	}
+
+	&__text {
+
+		font-size: 16px;
+		line-height: 22px;
+
+		a {
+
+			color: var(--accentSecondary);
+			transition: var(--transitionDefault);
+			text-decoration-color: transparent;
+
+			&:hover {
+
+				text-decoration-color: var(--accentSecondary);
+
+			}
+
+		}
 
 	}
 

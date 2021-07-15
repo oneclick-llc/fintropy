@@ -13,23 +13,84 @@
 
 			<ul class="team__list">
 
-				<li class="team__item fade-in fade-in--100">
+{% set team = [
 
-					<div class="team__ico">
-						<svg width="72" height="72" viewBox="0 0 72 72">
-							<path d="M30.64 27.43h-3.96c2.65-2.96 5.56-4.02 9.46-4.02 6.83 0 12.37 5.4 12.37 12.05 0 6.66-5.54 12.06-12.37 12.06-6.83 0-12.37-5.4-12.37-12.06h-2.75c0 8.14 6.77 14.73 15.12 14.73s15.12-6.6 15.12-14.73-6.77-14.73-15.12-14.73c-4.41 0-7.92 1.22-11 4.36v-3.03H22.4v8.05h8.24v-2.68zm12.37 6.7h-5.5v-6.7h-2.74v9.37H43v-2.68z"/>
-						</svg>
+	{
+		name : "Eugine Kolesnikoff",
+		status : "CEO",
+		text : '20+ years of experience in Finance and Venture Capital: <a href="/" target="_blank" rel="noopener">AIG Brunswick Capital Management</a> and the <a href="/" target="_blank" rel="noopener">IIDF</a>. Leadership role at Moscow Institute of Physics and Technology.',
+		photo: "kolesnikoff",
+		link : "/"
+	},
+	{
+		name : "Jonathan Austin",
+		status : "CTO",
+		text : '20+ years of software product experience: <a href="/" target="_blank" rel="noopener">SAP</a>, <a href="/" target="_blank" rel="noopener">Oracle</a>, <a href="/" target="_blank" rel="noopener">IBM</a>. Participated in <a href="/" target="_blank" rel="noopener">Morpheus Labs</a> and <a href="/" target="_blank" rel="noopener">Quube Exchange</a>. Senior Consult at SME Digital Transformation and Capelle Consulting.',
+		photo: "austin",
+		link : "/"
+	},
+	{
+		name : "Zied Chaabane",
+		status : "CMO",
+		text : 'Has worked on 15+ cryptocurrency projects including <a href="/" target="_blank" rel="noopener">Ideaology</a>, <a href="/" target="_blank" rel="noopener">Burency</a>, <a href="/" target="_blank" rel="noopener">2local</a>, and <a href="/" target="_blank" rel="noopener">Pointpay</a>. Worked in <a href="/" target="_blank" rel="noopener">Accenture</a>, <a href="/" target="_blank" rel="noopener">Honeywell</a>, <a href="/" target="_blank" rel="noopener">Halliburton</a> and <a href="/" target="_blank" rel="noopener">Emerson</a>. Executive MBA holder.',
+		photo: "chaabane",
+		link : "/"
+	},
+	{
+		name : "John Burmeister",
+		status : "Partnership Lead",
+		text : '10+ experience  in the Global Payments industry: <a href="/" target="_blank" rel="noopener">Western Union</a> and <a href="/" target="_blank" rel="noopener">Monex Group</a>. Worked as LaunchPad Manager for <a href="/" target="_blank" rel="noopener">YFDAI</a>, driving marketing strategy and partnerships.',
+		photo: "burmeister",
+		link : "/"
+	}
+
+] %}
+
+{% for item in team %}
+
+				<li class="team__item fade-in fade-in--{{ loop.index }}00">
+
+					<div class="team__head">
+
+						<div class="team__photo">
+
+							<picture>
+
+								<source srcset="/img/team/{{ item.photo }}.webp 1x, /img/team/{{ item.photo }}@2x.webp 2x" type="image/webp">
+
+								<source srcset="/img/team/{{ item.photo }}.png 1x, /img/team/{{ item.photo }}@2x.png 2x">
+
+								<img src="/img/team/{{ item.photo }}.png" alt="{{ item.name }}" loading="lazy" width="218" height="218">
+
+							</picture>
+
+						</div>
+
+						<a href="{{ item.link }}" target="_blank" rel="noopener nofollow" class="team__linkedin">
+							linkedIn {{ item.name }}
+						</a>
+
 					</div>
 
-					<h3 class="team__head">
-						Activly managed&nbsp;funds
-					</h3>
+					<div class="team__body">
 
-					<p>
-						Consistent portfolio rebalancing by&nbsp;experienced asset managers.
-					</p>
+						<h3 class="team__name h3">
+							{{ item.name }}
+						</h3>
+
+						<p class="team__status">
+							{{ item.status }}
+						</p>
+
+						<p class="team__text">
+							{{ item.text | safe }}
+						</p>
+
+					</div>
 
 				</li>
+
+{% endfor %}
 
 			</ul>
 
