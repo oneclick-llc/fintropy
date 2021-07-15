@@ -1,23 +1,16 @@
 .footer {
 
-	padding: 40px 0;
-
-	@media ($smWidth) {
-
-		padding: 20px 0;
-
-	}
+	background-color: #3b156a;
 
 	.center {
 
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		width: 1440px;
+		padding: 58px 64px;
 
 		@media ($smWidth) {
 
-			justify-content: center;
 			flex-direction: column-reverse;
 
 		}
@@ -26,81 +19,23 @@
 
 	&__logo {
 
-		.thema-white & {
-
-			--color: var(--black);
-
-		}
-
-		@media ($smWidth) {
-
-			svg {
-
-				width: 124px;
-				height: 20px;
-
-			}
-
-		}
+		flex-shrink: 0;
+		width: 170px;
 
 	}
 
-	&__left {
+	&__menu {
 
-		width: 256px;
-
-		@media ($smWidth) {
-
-			width: auto;
-
-		}
+		flex-grow: 1;
 
 	}
 
-	&__right {
-
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		width: 256px;
-
-		@media ($mdWidth) {
-
-			display: none;
-
-		}
-
-	}
-
-	&__social {
-
-		display: flex;
-
-		@media ($smWidth) {
-
-			display: block;
-
-			.social {
-
-				margin-bottom: 20px;
-
-			}
-
-		}
-
-	}
-
-	&__btn {
-
-		display: flex;
-		align-items: center;
-
-	}
-
-	&__thema {
+	&__copyright {
 
 		flex-shrink: 0;
-		margin-right: 24px;
+		letter-spacing: -0.03em;
+		font-size: 14px;
+		color: rgba(255, 255, 255, 0.3);
 
 	}
 

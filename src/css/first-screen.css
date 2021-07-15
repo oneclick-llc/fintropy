@@ -4,6 +4,19 @@
 	position: relative;
 	overflow: hidden;
 
+	.center::before {
+
+		position: absolute;
+		top: -32px;
+		left: -524px;
+		content: '';
+		width: 446px;
+		height: 446px;
+		border-radius: 50%;
+		border: 2px solid var(--secondary);
+
+	}
+
 	&__title {
 
 		font-size: 80px;
