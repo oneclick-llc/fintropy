@@ -1,4 +1,4 @@
-( header  => {
+/*( header  => {
 
 	if(header) {
 
@@ -14,4 +14,4 @@
 
 	}
 
-})(document.querySelector('.header'));
+})(document.querySelector('.header'));*/

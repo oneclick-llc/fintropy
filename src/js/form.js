@@ -1,4 +1,4 @@
-( items => {
+/*( items => {
 
 	if(!items.length) {
 
@@ -89,4 +89,4 @@
 
 	});
 
-})(document.querySelectorAll('.form'));
+})(document.querySelectorAll('.form'));*/

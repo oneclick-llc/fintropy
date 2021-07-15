@@ -1,0 +1,65 @@
+.mobile-app {
+
+	margin: 156px 0 0;
+	background-color: var(--accentSecondary);
+
+	&__box {
+
+		display: flex;
+
+	}
+
+	&__content {
+
+		margin-left: 64px;
+		width: 500px;
+		flex-shrink: 0;
+		padding: 112px 0;
+
+		.hash {
+
+			margin-bottom: 36px;
+			--secondary: #fff;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 20px;
+		line-height: 24px;
+		margin: 18px 0 4px;
+
+	}
+
+	&__img {
+
+		position: relative;
+		flex-grow: 1;
+
+		img {
+
+			position: absolute;
+			left: 72px;
+			bottom: 0;
+
+		}
+
+	}
+
+	img&__coin-purpur {
+
+		bottom: 14px;
+		left: 316px;
+
+	}
+
+	img&__coin-gold {
+
+		bottom: 194px;
+		left: 0;
+
+	}
+
+}

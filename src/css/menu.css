@@ -21,6 +21,14 @@
 		line-height: 22px;
 		text-decoration: none;
 		color: var(--secondary);
+		transition: var(--transitionDefault);
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+
+			border-bottom-color: var(--secondary);
+
+		}
 
 	}
 

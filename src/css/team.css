@@ -76,7 +76,7 @@
 
 		&:hover {
 
-			background-color: var(--accentSecondary);
+			background-color: var(--accentPrimary);
 
 		}
 
@@ -98,7 +98,7 @@
 
 		a {
 
-			color: var(--accentSecondary);
+			color: var(--accentPrimary);
 			transition: var(--transitionDefault);
 			text-decoration-color: transparent;
 

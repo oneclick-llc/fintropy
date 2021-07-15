@@ -1,0 +1,54 @@
+.subscribe {
+
+	padding: 162px 0 140px;
+
+	&__box {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__form {
+
+		width: 672px;
+		margin-top: 16px;
+
+	}
+
+	&__fieldset {
+
+		position: relative;
+		margin-top: 45px;
+		max-width: 544px;
+
+		.input {
+
+			padding-right: 180px;
+
+		}
+
+		.input:invalid + .btn {
+
+			color: var(--secondary);
+			background-color: rgba(157, 96, 255, 0.2);
+
+		}
+
+		.btn {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 163px;
+			height: 56px;
+			line-height: 56px;
+			font-size: 18px;
+			margin: auto;
+
+		}
+
+	}
+
+}
