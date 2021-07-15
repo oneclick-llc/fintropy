@@ -12,7 +12,7 @@
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
 
-	<link href="/fonts/Circe-Bold.woff2" rel="preload" as="font" type="font/woff" crossorigin>
+	<link href="/fonts/Circe-Bold.woff" rel="preload" as="font" type="font/woff" crossorigin>
 	<link href="/fonts/Circe-Regular.woff" rel="preload" as="font" type="font/woff" crossorigin>
 
 	<link href="{{ url }}/favicon.png" rel="apple-touch-icon-precomposed">
@@ -62,6 +62,8 @@
 {% include "template/footer.html" %}
 
 </div>
+
+{% include "template/modal.html" %}
 
 {% if build %}
 

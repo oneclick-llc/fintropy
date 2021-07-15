@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+ color: red !important;
 }
 
 html {
@@ -38,7 +38,7 @@ body {
 	position: relative;
 	background-color: var(--primary);
 
-/* background-image: url(/css/1.png); */
+background-image: url(/css/2.png);
 background-position: top;
 }
 
@@ -228,5 +228,26 @@ img {
 	font-size: 34px;
 	font-weight: 700;
 	line-height: 40px;
+
+}
+
+.hide {
+
+	display: none !important;
+
+}
+
+.visuallyhidden {
+
+	position: absolute !important;
+
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
 
 }

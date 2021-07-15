@@ -1,92 +1,50 @@
-/*( items => {
+( form => {
 
-	if(!items.length) {
+	if (!form) {
 
 		return;
 
 	}
 
-	//reCaptcha v3
+	const btn = form.querySelector(".form__submit");
 
-	const PUBLIC_KEY = '6LfGxU0bAAAAAClgIdFrABaU41CwTWFnlL1dfJkh';
+	form.addEventListener("submit", event => {
 
-	const reCaptcha = () => {
+		event.preventDefault();
 
-		Array.from(items, form => form.removeEventListener('input', reCaptcha));
-
-		const script = document.createElement('script');
-
-		script.async = true;
-		script.src = 'https://www.google.com/recaptcha/api.js?render=' + PUBLIC_KEY;
-
-		document.head.appendChild(script);
-
-	}
-
-	const submit = (form, token = false) => {
-
-		const btn = form.querySelector('.form__submit');
-		const formData = new FormData(form);
-
-		formData.append('g_recaptcha_response', token);
-
-		form.classList.add('is-loading');
+		form.classList.add("is-loading");
 		btn.disabled = true;
 
-		fetch(form.getAttribute('action'), {
-			method: 'POST',
-			body: formData
+		const object = {};
+
+		new FormData(form).forEach((value, key) => (object[key] = value));
+
+		const json = JSON.stringify(object);
+
+		fetch(form.getAttribute("action"), {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json"
+			},
+			body: json
 		})
-		.then(response => response.json())
+//		.then(response => response.json())
 		.then(result => {
 
-			console.log(result);
-
-			form.classList.remove('is-loading');
+			form.classList.remove("is-loading");
 			btn.disabled = false;
 
-			if(result.title || result.text) {
+			form.reset();
 
-				form.reset();
-				form.querySelector('.communication__result').innerHTML = result.title;
-
-			}
-
-			form.classList.add('is-done');
-
-		});
-
-	};
-
-	Array.from(items, form => {
-
-		form.addEventListener('submit', event => {
-
-			event.preventDefault();
-
-			if (typeof(grecaptcha) === 'undefined') {
-
-				alert('Google reCaptcha error');
-				submit(form);
-
-			} else {
-
-				grecaptcha.ready( () => {
-
-					grecaptcha.execute(PUBLIC_KEY).then( token => {
-
-						submit(form, token);
-
-					});
-
-				});
-
-			}
+			modal.dispatchEvent(new CustomEvent("modalShow", {
+				detail: {
+					selector: "thank"
+				}
+			}));
 
 		});
-
-		form.addEventListener('input', reCaptcha);
 
 	});
 
-})(document.querySelectorAll('.form'));*/
+})(document.querySelector(".subscribe__form"));
