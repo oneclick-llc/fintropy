@@ -1,0 +1,19 @@
+.cases {
+
+	padding: 80px 0;
+
+	&__list {
+
+		display: flex;
+		align-items: center;
+		margin: 8px -32px;
+
+	}
+
+	&__item {
+
+		margin: 32px;
+
+	}
+
+}
