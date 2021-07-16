@@ -25,8 +25,10 @@
 
 					<picture>
 
-						<source srcset="/img/try-demo/img.webp 1x, /img/try-demo/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/try-demo/img--mobile.webp 1x, /img/try-demo/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/try-demo/img--mobile.png 1x, /img/try-demo/img--mobile@2x.png 2x" media="(max-width: 767px)">
 
+						<source srcset="/img/try-demo/img.webp 1x, /img/try-demo/img@2x.webp 2x" type="image/webp">
 						<source srcset="/img/try-demo/img.png 1x, /img/try-demo/img@2x.png 2x">
 
 						<img src="/img/try-demo/img.png" alt="" loading="lazy" width="748" height="440">

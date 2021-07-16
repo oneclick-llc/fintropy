@@ -9,6 +9,13 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding: 30px 0;
+		margin: 45px 0 6px;
+
+	}
+
 	&__table {
 
 		margin: 55px -32px 0 0;
@@ -26,6 +33,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 0;
+			padding: 0;
+			background: none;
+
+		}
+
 	}
 
 	&__row {
@@ -36,6 +51,13 @@
 		@media ($mdWidth) {
 
 			margin: 44px 0;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 16px 0;
 
 		}
 
@@ -62,6 +84,23 @@
 		@media ($mdWidth) {
 
 			width: 96px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: auto;
+			display: flex;
+			align-items: baseline;
+
+			&::after {
+
+				position: relative;
+				bottom: 0;
+				order: 2;
+				margin-left: 12px;
+
+			}
 
 		}
 
@@ -163,6 +202,15 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 0;
+			order: 3;
+			text-align: right;
+			flex-grow: 1;
+
+		}
+
 	}
 
 	&__quarter {
@@ -178,6 +226,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 26px;
+			order: 1;
+
+		}
+
 	}
 
 	&__tbody {
@@ -186,6 +241,13 @@
 		background-color: rgba(157, 96, 255, 0.1);
 		flex-grow: 1;
 		border-radius: 18px;
+
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			padding: 14px;
+
+		}
 
 	}
 
@@ -208,6 +270,15 @@
 			width: 140px;
 			min-height: 110px;
 			flex-grow: 0;
+
+		}
+
+		@media ($smWidth) {
+
+			width: 50%;
+			min-height: 0;
+			display: block;
+			padding: 14px 10px !important;
 
 		}
 

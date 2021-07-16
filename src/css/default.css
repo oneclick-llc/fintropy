@@ -38,7 +38,6 @@ body {
 	position: relative;
 	background-color: var(--primary);
 
-background-position: center 0px;
 }
 
 ::selection {
@@ -197,6 +196,12 @@ img {
 
 	}
 
+	@media ($smWidth) {
+
+		margin-bottom: 8px;
+
+	}
+
 	&::before {
 
 		width: 39px;
@@ -225,6 +230,13 @@ img {
 
 	}
 
+	@media ($smWidth) {
+
+		font-size: 26px;
+		line-height: 28px;
+
+	}
+
 }
 
 .h2 {
@@ -233,6 +245,13 @@ img {
 	font-weight: 700;
 	line-height: 56px;
 
+	@media ($smWidth) {
+
+		font-size: 26px;
+		line-height: 30px;
+
+	}
+
 }
 
 .h3 {
@@ -240,6 +259,13 @@ img {
 	font-size: 34px;
 	font-weight: 700;
 	line-height: 40px;
+
+	@media ($smWidth) {
+
+		font-size: 26px;
+		line-height: 32px;
+
+	}
 
 }
 

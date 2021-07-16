@@ -10,6 +10,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding: 86px 0 20px;
+
+	}
+
 	.center::before {
 
 		position: absolute;
@@ -39,6 +45,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 15px;
+
+		}
+
 	}
 
 	&__desc {
@@ -54,6 +68,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 41px;
+
+		}
+
 	}
 
 	&__btns {
@@ -64,6 +86,19 @@
 		@media ($mdWidth) {
 
 			margin-bottom: 93px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin-bottom: 45px;
+			display: block;
+
+			.btn {
+
+				margin: 20px 0;
+
+			}
 
 		}
 
@@ -126,6 +161,12 @@
 
 			position: relative;
 			height: 352px;
+
+		}
+
+		@media ($smWidth) {
+
+			height: 148px;
 
 		}
 

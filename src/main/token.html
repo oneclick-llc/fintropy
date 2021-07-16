@@ -13,9 +13,21 @@
 
 			<img class="token__pic" src="/img/token/pic.svg" width="379" height="322" loading="lazy" alt="">
 
+			<div class="token__tabs">
+
+				<button class="token__btn-tab button is-active" type="button">
+					Distribution
+				</button>
+
+				<button class="token__btn-tab button" type="button">
+					Funds Raised
+				</button>
+
+			</div>
+
 			<div class="token__row">
 
-				<div class="token__col fade-in">
+				<div class="token__col fade-in is-active">
 
 					<h3 class="h3">
 						Token Distribution
@@ -23,6 +35,7 @@
 
 					<picture>
 
+						<source srcset="/img/token/distribution--mobile.svg" media="(max-width:767px)">
 						<source srcset="/img/token/distribution--tablet.svg" media="(max-width:1249px)">
 						<source srcset="/img/token/distribution.svg">
 
@@ -38,7 +51,14 @@
 						Usage of Funds Raised
 					</h3>
 
-					<img src="/img/token/raised.svg" width="317" height="338" loading="eager" alt="">
+					<picture>
+
+						<source srcset="/img/token/raised--mobile.svg" media="(max-width:767px)">
+						<source srcset="/img/token/raised.svg">
+
+						<img src="/img/token/raised.svg" width="317" height="338" loading="eager" alt="">
+
+					</picture>
 
 				</div>
 

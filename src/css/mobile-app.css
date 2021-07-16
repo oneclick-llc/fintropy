@@ -9,9 +9,21 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin-top: 30px;
+
+	}
+
 	&__box {
 
 		display: flex;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -43,6 +55,19 @@
 
 		}
 
+		@media ($smWidth) {
+
+			padding: 36px 0;
+			width: 100%;
+
+			.hash {
+
+				margin-bottom: 16px;
+
+			}
+
+		}
+
 	}
 
 	&__text {
@@ -55,6 +80,15 @@
 
 			margin: 14px 0 0;
 			max-width: 180px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 17px 0 0;
+			max-width: 150px;
+			font-size: 16px;
+			line-height: 22px;
 
 		}
 
@@ -77,27 +111,66 @@
 
 		}
 
-		img {
+		@media ($smWidth) {
+
+			position: static;
+			margin: -66px -16px 0;
+
+		}
+
+		&-phone {
 
 			position: absolute;
 			left: 72px;
 			bottom: 0;
 
+			@media ($smWidth) {
+
+				position: relative;
+				width: 234px;
+				height: auto;
+				margin: auto;
+				left: 42px;
+
+			}
+
 		}
 
-	}
+		&-purpur {
 
-	img&__coin-purpur {
+			bottom: 14px;
+			left: 316px;
+			position: absolute;
 
-		bottom: 14px;
-		left: 316px;
+			@media ($smWidth) {
 
-	}
+				width: 96px;
+				height: auto;
+				left: 50%;
+				bottom: 4px;
+				margin-left: 70px;
 
-	img&__coin-gold {
+			}
 
-		bottom: 194px;
-		left: 0;
+		}
+
+		&-gold {
+
+			bottom: 194px;
+			left: 0;
+			position: absolute;
+
+			@media ($smWidth) {
+
+				width: 76px;
+				height: auto;
+				bottom: 98px;
+				left: 50%;
+				margin-left: -90px;
+
+			}
+
+		}
 
 	}
 

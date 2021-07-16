@@ -8,6 +8,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding: 30px 0;
+
+	}
+
 	&__list {
 
 		display: flex;
@@ -22,6 +28,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 4px -8px;
+			justify-content: space-between;
+
+		}
+
 	}
 
 	&__item {
@@ -33,6 +46,43 @@
 		@media ($mdWidth) {
 
 			margin: 22px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 4px;
+
+			&:nth-child(1) {
+
+				order: 3;
+
+			}
+
+			&:nth-child(2) {
+
+				order: 1;
+
+			}
+
+			&:nth-child(3) {
+
+				order: 2;
+
+			}
+
+			&:nth-child(4) {
+
+				order: 4;
+
+			}
+
+			img {
+
+				width: auto;
+				height: auto;
+
+			}
 
 		}
 

@@ -11,7 +11,7 @@
 
 	@media ($smWidth) {
 
-		padding: 36px;
+		padding: var(--indent);
 
 	}
 
@@ -42,6 +42,22 @@
 			background-color: var(--secondary);
 			padding: 83px;
 
+			@media ($smWidth) {
+
+				padding: 52px 48px 40px;
+				width: 360px;
+
+				p {
+
+					font-size: 16px;
+					line-height: 22px;
+					margin: 10px auto 0;
+					max-width: 256px;
+
+				}
+
+			}
+
 			p {
 
 				font-size: 20px;
@@ -65,6 +81,13 @@
 			margin: auto;
 			max-width: 90%;
 			max-height: 90%;
+
+			@media ($smWidth) {
+
+				width: 560px;
+				height: 315px;
+
+			}
 
 			iframe {
 

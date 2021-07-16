@@ -8,6 +8,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding-top: 30px;
+
+	}
+
 	&__list {
 
 		display: flex;
@@ -18,6 +24,13 @@
 		@media ($mdWidth) {
 
 			margin: 38px -10px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 32px 0;
+			display: block;
 
 		}
 
@@ -42,6 +55,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 16px 0;
+			width: 100%;
+			padding: 30px 20px 30px 40px;
+
+		}
+
 	}
 
 	&__ico {
@@ -55,19 +76,30 @@
 		background-color: rgba(157, 96, 255, 0.26);
 		margin-bottom: 32px;
 
+		@media ($smWidth) {
+
+			margin-bottom: 28px;
+
+		}
+
 	}
 
 	&__head {
 
 		font-size: 34px;
 		font-weight: 700;
-		line-height: 34px;
+		line-height: 1;
 		margin-bottom: 16px;
 
 		@media ($mdWidth) {
 
 			font-size: 30px;
-			line-height: 30px;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 28px;
 
 		}
 

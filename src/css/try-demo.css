@@ -10,9 +10,22 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin-top: 92px;
+		padding: 59px 0 52px;
+
+	}
+
 	&__box {
 
 		display: flex;
+
+		@media ($smWidth) {
+
+			flex-direction: column-reverse;
+
+		}
 
 	}
 
@@ -25,6 +38,20 @@
 		@media ($mdWidth) {
 
 			margin: 0;
+
+		}
+
+		@media ($smWidth) {
+
+			width: 100%;
+			text-align: center;
+
+			p {
+
+				max-width: 200px;
+				margin: auto;
+
+			}
 
 		}
 
@@ -61,12 +88,47 @@
 
 		}
 
+		@media ($smWidth) {
+
+			position: static;
+			margin: -85px auto 34px;
+
+			img {
+
+				position: static;
+				width: auto;
+				height: auto;
+				margin: auto;
+
+			}
+
+		}
+
 	}
 
 	&__btn {
 
 		display: flex;
 		margin-top: 35px;
+
+		@media ($smWidth) {
+
+			margin-top: 22px;
+
+			.btn {
+
+				width: 100%;
+
+				&::after {
+
+					right: 50%;
+					margin-right: -80px;
+
+				}
+
+			}
+
+		}
 
 		.btn {
 

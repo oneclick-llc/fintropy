@@ -8,6 +8,22 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding: 66px 0;
+
+	}
+
+	&__title {
+
+		@media ($smWidth) {
+
+			line-height: 28px;
+
+		}
+
+	}
+
 	&__box {
 
 		@media ($desktop) {
@@ -52,9 +68,21 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin-top: 36px;
+
+		}
+
 		.input {
 
 			padding-right: 180px;
+
+			@media ($smWidth) {
+
+				padding-right: 14px;
+
+			}
 
 		}
 
@@ -76,6 +104,14 @@
 			line-height: 56px;
 			font-size: 18px;
 			margin: auto;
+
+			@media ($smWidth) {
+
+				position: relative;
+				width: 100%;
+				margin-top: 20px;
+
+			}
 
 		}
 
