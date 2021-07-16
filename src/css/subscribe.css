@@ -2,25 +2,55 @@
 
 	padding: 162px 0 140px;
 
+	@media ($mdWidth) {
+
+		padding: 120px 0 148px;
+
+	}
+
 	&__box {
 
-		display: flex;
-		justify-content: space-between;
+		@media ($desktop) {
+
+			display: flex;
+			justify-content: space-between;
+
+		}
+
+	}
+
+	&__img {
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 	}
 
 	&__form {
 
-		width: 672px;
-		margin-top: 16px;
+		@media ($desktop) {
+
+			width: 672px;
+			margin-top: 16px;
+
+		}
 
 	}
 
 	&__fieldset {
 
 		position: relative;
-		margin-top: 45px;
-		max-width: 544px;
+		margin-top: 30px;
+
+		@media ($desktop) {
+
+			margin-top: 45px;
+			max-width: 544px;
+
+		}
 
 		.input {
 

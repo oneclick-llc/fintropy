@@ -16,19 +16,30 @@
 
 		@media ($mdWidth) {
 
+			--indent: 34px;
+			justify-content: space-between;
+
 		}
 
 	}
 
 	&__logo {
 
-		width: 240px;
+		@media ($desktop) {
+
+			width: 240px;
+
+		}
 
 	}
 
 	&__menu {
 
+		@media ($mdWidth) {
 
+			margin-right: -20px;
+
+		}
 
 	}
 

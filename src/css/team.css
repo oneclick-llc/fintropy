@@ -2,12 +2,25 @@
 
 	padding: 90px 0 32px;
 
+	@media ($mdWidth) {
+
+		padding: 50px 0;
+
+	}
+
 	&__list {
 
 		display: flex;
 		flex-wrap: wrap;
 		margin: 50px -80px 0 -40px;
 		list-style: none;
+
+		@media ($mdWidth) {
+
+			margin: 8px -64px 0 -32px;
+			justify-content: space-between;
+
+		}
 
 	}
 
@@ -17,6 +30,14 @@
 		width: calc(100% / 2 - 80px);
 		display: flex;
 
+		@media ($mdWidth) {
+
+			margin: 60px 32px;
+			display: block;
+			width: calc(100% / 2 - 84px);
+
+		}
+
 	}
 
 	&__head {
@@ -24,6 +45,12 @@
 		width: 218px;
 		margin-right: 36px;
 		flex-shrink: 0;
+
+		@media ($mdWidth) {
+
+			margin: 0 0 28px;
+
+		}
 
 	}
 
@@ -88,6 +115,12 @@
 		font-size: 20px;
 		font-weight: 700;
 		line-height: 26px;
+
+		@media ($mdWidth) {
+
+			margin-top: 10px;
+
+		}
 
 	}
 

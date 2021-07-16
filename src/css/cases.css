@@ -2,10 +2,25 @@
 
 	padding: 80px 0;
 
+	@media ($mdWidth) {
+
+		padding: 50px 0;
+
+	}
+
 	&__list {
 
 		display: flex;
 		margin: 8px -32px;
+
+		@media ($mdWidth) {
+
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin: 45px -22px;
+
+		}
 
 	}
 
@@ -14,6 +29,12 @@
 		margin: 32px;
 		display: flex;
 		align-items: center;
+
+		@media ($mdWidth) {
+
+			margin: 22px;
+
+		}
 
 	}
 

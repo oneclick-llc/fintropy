@@ -4,6 +4,12 @@
 	position: relative;
 	overflow: hidden;
 
+	@media ($mdWidth) {
+
+		padding: 161px 0 96px;
+
+	}
+
 	.center::before {
 
 		position: absolute;
@@ -25,6 +31,14 @@
 		max-width: 640px;
 		margin-bottom: 44px;
 
+		@media ($mdWidth) {
+
+			font-size: 50px;
+			line-height: 56px;
+			margin-bottom: 26px;
+
+		}
+
 	}
 
 	&__desc {
@@ -34,6 +48,12 @@
 		line-height: 28px;
 		margin-bottom: 72px;
 
+		@media ($mdWidth) {
+
+			margin-bottom: 54px;
+
+		}
+
 	}
 
 	&__btns {
@@ -41,9 +61,21 @@
 		display: flex;
 		margin-bottom: 154px;
 
+		@media ($mdWidth) {
+
+			margin-bottom: 93px;
+
+		}
+
 		.btn {
 
 			margin-right: 18px;
+
+			@media ($mdWidth) {
+
+				margin-right: 26px;
+
+			}
 
 		}
 
@@ -52,6 +84,12 @@
 	&__scroll {
 
 		margin-left: -2px;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 		svg {
 
@@ -63,13 +101,6 @@
 
 	&__img {
 
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: 176px;
-		right: 0;
-		bottom: 0;
-
 		img {
 
 			position: absolute;
@@ -78,6 +109,23 @@
 			top: 0;
 			left: 0;
 			object-fit: cover;
+
+		}
+
+		@media ($desktop) {
+
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: 176px;
+			right: 0;
+			bottom: 0;
+		}
+
+		@media ($mdWidth) {
+
+			position: relative;
+			height: 352px;
 
 		}
 

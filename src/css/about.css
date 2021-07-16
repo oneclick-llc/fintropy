@@ -2,12 +2,24 @@
 
 	padding: 90px 0 0;
 
+	@media ($mdWidth) {
+
+		padding-top: 50px;
+
+	}
+
 	&__list {
 
 		display: flex;
 		flex-wrap: wrap;
 		margin: 60px -16px -16px;
 		list-style: none;
+
+		@media ($mdWidth) {
+
+			margin: 38px -10px;
+
+		}
 
 	}
 
@@ -21,6 +33,14 @@
 		border-radius: 18px;
 		line-height: 22px;
 		color: #fff;
+
+		@media ($mdWidth) {
+
+			margin: 10px;
+			padding-right: 20px;
+			width: calc(100% / 2 - 20px);
+
+		}
 
 	}
 
@@ -43,6 +63,13 @@
 		font-weight: 700;
 		line-height: 34px;
 		margin-bottom: 16px;
+
+		@media ($mdWidth) {
+
+			font-size: 30px;
+			line-height: 30px;
+
+		}
 
 	}
 

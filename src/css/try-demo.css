@@ -4,6 +4,12 @@
 	padding: 85px 0;
 	background-color: var(--accentSecondary);
 
+	@media ($mdWidth) {
+
+		margin-top: 166px;
+
+	}
+
 	&__box {
 
 		display: flex;
@@ -16,18 +22,42 @@
 		width: 360px;
 		flex-shrink: 0;
 
+		@media ($mdWidth) {
+
+			margin: 0;
+
+		}
+
 	}
 
 	&__img {
 
 		position: relative;
 		flex-grow: 1;
+		pointer-events: none;
 
 		img {
 
 			position: absolute;
 			left: 0;
 			bottom: -30px;
+
+		}
+
+		@media ($mdWidth) {
+
+			position: absolute;
+			top: -300px;
+			left: 365px;
+			right: -100vw;
+			bottom: -40px;
+			overflow: hidden;
+
+			img {
+
+				bottom: 0;
+
+			}
 
 		}
 
