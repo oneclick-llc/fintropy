@@ -30,6 +30,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 	}
 
 	&__row {

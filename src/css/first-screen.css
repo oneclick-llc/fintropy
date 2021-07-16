@@ -167,6 +167,8 @@
 		@media ($smWidth) {
 
 			height: 148px;
+			max-width: 480px;
+			margin: auto;
 
 		}
 

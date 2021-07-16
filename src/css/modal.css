@@ -113,7 +113,7 @@
 
 	}
 
-	&__item--thank ~ &__close-btn {
+	&__item--thank:not(.visuallyhidden) ~ &__close-btn {
 
 		display: none;
 
