@@ -86,7 +86,7 @@
 
 		}
 
-		.input:invalid + .btn {
+		.input--invalid + .btn {
 
 			color: var(--secondary);
 			background-color: rgba(157, 96, 255, 0.2);

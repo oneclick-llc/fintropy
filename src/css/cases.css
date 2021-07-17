@@ -47,6 +47,13 @@
 
 			margin: 22px;
 
+			img {
+
+				width: auto;
+				height: auto;
+
+			}
+
 		}
 
 		@media ($smWidth) {
@@ -74,13 +81,6 @@
 			&:nth-child(4) {
 
 				order: 4;
-
-			}
-
-			img {
-
-				width: auto;
-				height: auto;
 
 			}
 

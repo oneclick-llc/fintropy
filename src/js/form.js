@@ -6,11 +6,21 @@
 
 	}
 
-	const btn = form.querySelector(".form__submit");
+	const btn = form.querySelector(".form__submit"),
+		  email = form.elements.email,
+		  re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 	form.addEventListener("submit", event => {
 
 		event.preventDefault();
+
+		if(re.test(String(email.value).toLowerCase()) === false) {
+
+			email.focus();
+			return;
+
+		}
 
 		form.classList.add("is-loading");
 		btn.disabled = true;

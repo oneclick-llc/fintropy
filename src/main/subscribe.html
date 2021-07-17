@@ -11,7 +11,7 @@
 
 				</div>
 
-				<form class="subscribe__form fade-in fade-in--right form" action="/api/subscribe" novalidate="novalidate">
+				<form class="subscribe__form fade-in fade-in--right form" action="/api/subscribe" novalidate="novalidate" autocomplete="off">
 
 					<input type="hidden" value="Subscribe" name="subject">
 
@@ -21,7 +21,7 @@
 
 					<div class="subscribe__fieldset">
 
-						<input type="email" name="email" placeholder="Enter your email" aria-label="enter email" required="required" class="input">
+						<input type="email" name="email" placeholder="Enter your email" aria-label="enter email" required="required" class="input input--invalid" autocomplete="off">
 
 						<button class="btn btn--violet form__submit">
 							Send
