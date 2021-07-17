@@ -4,12 +4,21 @@
 	justify-content: center;
 	list-style: none;
 
+	@media ($smWidth) {
+
+		display: block;
+
+	}
+
 	&__item {
 
 		margin: 0 18px;
 
 		@media ($smWidth) {
 
+			margin: 40px 0;
+			display: flex;
+			justify-content: center;
 
 		}
 
@@ -27,6 +36,12 @@
 		&:hover {
 
 			border-bottom-color: var(--secondary);
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 22px;
 
 		}
 
