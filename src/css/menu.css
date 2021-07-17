@@ -6,7 +6,11 @@
 
 	@media ($smWidth) {
 
-		display: block;
+		.header & {
+
+			display: block;
+
+		}
 
 	}
 
@@ -16,9 +20,13 @@
 
 		@media ($smWidth) {
 
-			margin: 40px 0;
-			display: flex;
-			justify-content: center;
+			.header & {
+
+				margin: 40px 0;
+				display: flex;
+				justify-content: center;
+
+			}
 
 		}
 
@@ -41,7 +49,11 @@
 
 		@media ($smWidth) {
 
-			font-size: 22px;
+			.header & {
+
+				font-size: 22px;
+
+			}
 
 		}
 

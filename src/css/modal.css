@@ -24,7 +24,6 @@
 
 	&.is-video &__box {
 
-		outline:1px solid red;
 		position: static;
 
 	}
@@ -122,8 +121,14 @@
 	&__close-btn {
 
 		position: absolute;
-		top: 58px;
-		right: 64px;
+		top: var(--indent);
+		right: var(--indent);
+
+		@media ($mdWidth) {
+
+			--indent: 16px;
+
+		}
 
 		svg {
 
