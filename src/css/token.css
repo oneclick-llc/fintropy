@@ -142,7 +142,7 @@
 			display: flex;
 			border-radius: 6px;
 			overflow: hidden;
-			margin: 32px 0 20px;
+			margin: 32px 0 64px;
 			border: 2px solid var(--secondary);
 
 		}

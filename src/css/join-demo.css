@@ -78,11 +78,11 @@
 
 				width: 310px;
 				height: auto;
-				margin: auto;
+				margin: -100px auto -16px;
 				position: relative;
-				left: -10px;
+				left: 0;
+				right: 0;
 				bottom: 0;
-				margin: -100px 0 -16px;
 
 			}
 
