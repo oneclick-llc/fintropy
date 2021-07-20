@@ -1,5 +1,8 @@
 # Fintropy
 [build](https://fintropy.wndrbase.com/)
 
-### Working hours:
-20:00
+### локальная разработка:
+gulp
+
+### собрать сборку для fintropy.io (он собирает только html, поэтому предварительно надо вызвать gulp для css,js,img)
+gulp build
