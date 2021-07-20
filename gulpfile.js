@@ -189,7 +189,7 @@ gulp.task('build', () => {
 	return gulp.src('src/**/index.html')
 		.pipe(nunjucksRender({
 			data: {
-				url: 'https://fintropy.io',
+				url: 'https://www.fintropy.io',
 				site: site,
 				build: true
 			},
