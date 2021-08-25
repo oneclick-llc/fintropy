@@ -1,195 +1,156 @@
 .header {
+  padding: 41px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
-	padding: 41px 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
+  @media ($smWidth) {
+    padding: 26px 0;
+  }
 
-	@media ($smWidth) {
+  .center {
+    display: flex;
+    align-items: center;
+    width: 1440px;
+    padding: 0 var(--header);
 
-		padding: 26px 0;
+    @media ($mdWidth) {
+      padding: 0 34px;
+      justify-content: space-between;
+    }
 
-	}
+    @media ($smWidth) {
+      padding: 0 var(--indent);
+    }
+  }
 
-	.center {
+  &__logo {
+    flex-shrink: 0;
 
-		display: flex;
-		align-items: center;
-		width: 1440px;
-		padding: 0 var(--indent);
+    @media ($desktop) {
+      width: 140px;
+    }
 
-		@media ($mdWidth) {
+    @media ($smWidth) {
+      svg {
+        width: 80px;
+        height: 29px;
+      }
+    }
+  }
 
-			padding: 0 34px;
-			justify-content: space-between;
+  &__menu {
+    @media ($mdWidth) {
+      margin-right: -20px;
+    }
 
-		}
+    @media ($smWidth) {
+      display: none;
+    }
+  }
 
-		@media ($smWidth) {
+  &__social {
+    @media ($mdWidth) {
+      margin-right: -20px;
+    }
 
-			padding: 0 var(--indent);
-
-		}
-
-	}
-
-	&__logo {
-
-		flex-shrink: 0;
-
-		@media ($desktop) {
-
-			width: 240px;
-
-		}
-
-		@media ($smWidth) {
-
-			svg {
-
-				width: 80px;
-				height: 29px;
-
-			}
-
-		}
-
-	}
-
-	&__menu {
-
-		@media ($mdWidth) {
-
-			margin-right: -20px;
-
-		}
-
-		@media ($smWidth) {
-
-			display: none;
-
-		}
-
-	}
-
+    @media ($smWidth) {
+      display: none;
+    }
+  }
 }
 
-
-
 .btn-menu-toggle {
+  display: none;
 
-	display: none;
+  @media ($smWidth) {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 2px;
+    right: 14px;
 
-	@media ($smWidth) {
+    &__line {
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: var(--secondary);
+      transform: rotate(0deg);
+      will-change: transform;
+      transition: var(--transitionDefault);
 
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		top: 2px;
-		right: 14px;
+      .menu-show & {
+        &--top {
+          bottom: 0;
+          transform: rotate(-225deg);
+        }
 
-		&__line {
+        &--center {
+          opacity: 0;
+          transform: rotate(-360deg);
+        }
 
-			position: absolute;
-			width: 18px;
-			height: 2px;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			background-color: var(--secondary);
-			transform: rotate(0deg);
-			will-change: transform;
-			transition: var(--transitionDefault);
+        &--bottom {
+          top: 0;
+          transform: rotate(-315deg);
+        }
+      }
 
-			.menu-show & {
+      &--top {
+        bottom: 14px;
+      }
 
-				&--top {
+      &--center {
+      }
 
-					bottom: 0;
-					transform: rotate(-225deg);
-
-				}
-
-				&--center {
-
-					opacity: 0;
-					transform: rotate(-360deg);
-
-				}
-
-				&--bottom {
-
-					top: 0;
-					transform: rotate(-315deg);
-
-				}
-
-			}
-
-			&--top {
-
-				bottom: 14px;
-
-			}
-
-			&--center {
-
-			}
-
-			&--bottom {
-
-				top: 14px;
-
-			}
-
-		}
-
-	}
-
+      &--bottom {
+        top: 14px;
+      }
+    }
+  }
 }
 
 @media ($smWidth) {
+  .menu-show {
+    .main,
+    .footer {
+      display: none;
+    }
 
-	.menu-show {
+    .header {
+      flex-grow: 1;
+      display: flex;
+      position: relative;
 
-		.main,
-		.footer {
+      .center {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
 
-			display: none;
+      &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-grow: 1;
+      }
 
-		}
-
-		.header {
-
-			flex-grow: 1;
-			display: flex;
-			position: relative;
-
-			.center {
-
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-
-			}
-
-			&__menu {
-
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				flex-grow: 1;
-
-			}
-
-		}
-
-	}
-
+      &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-grow: 1;
+      }
+    }
+  }
 }

@@ -33,6 +33,7 @@
     "precss": "^2.0.0"
   },
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "gulp-html-minifier2": "^1.1.11"
   }
 }
