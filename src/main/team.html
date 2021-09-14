@@ -68,7 +68,12 @@
 
 						</div>
 
-						<a href="{{ item.link }}" target="_blank" rel="noopener nofollow" class="team__linkedin">
+						<a href="{{ item.link }}" onclick="dataLayer.push({
+							'event': 'UAevent',
+							'eventCategory': 'user_behavior',
+							'eventAction': 'click_team',
+							'eventLabel': 'click_team_' + `${item.name.toLowerCase()}`
+							});" target="_blank" rel="noopener nofollow" class="team__linkedin">
 							linkedIn {{ item.name }}
 						</a>
 

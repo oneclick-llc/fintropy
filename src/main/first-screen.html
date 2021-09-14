@@ -17,14 +17,24 @@
 
 			<div class="first-screen__btns fade-in fade-in--400">
 
-				<a href="https://app.fintropy.io" target="_blank" class="btn btn--grad btn--demo" rel="noopener nofollow">
+				<a href="https://app.fintropy.io" onclick="dataLayer.push({
+					'event': 'UAevent',
+					'eventCategory': 'user_behavior',
+					'eventAction': 'goto_live-demo',
+					'eventLabel': undefined
+					});"  target="_blank" class="btn btn--grad btn--demo" rel="noopener nofollow">
 					<span>
 						Live Demo
 					</span>
 					<img src="/img/coins.svg" alt="">
 				</a>
 
-				<a href="/fintropy.pdf" target="_blank" class="btn btn--violet" rel="noopener nofollow">
+				<a href="/fintropy.pdf" onclick="dataLayer.push({
+					'event': 'UAevent',
+					'eventCategory': 'user_behavior',
+					'eventAction': 'download_intro-deck-pdf',
+					'eventLabel': undefined
+					});"  target="_blank" class="btn btn--violet" rel="noopener nofollow">
 					Intro Deck
 				</a>
 

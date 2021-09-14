@@ -23,7 +23,12 @@
 
 						<input type="email" name="email" placeholder="Enter your email" aria-label="enter email" required="required" class="input input--invalid" autocomplete="off">
 
-						<button class="btn btn--violet form__submit">
+						<button onclick="dataLayer.push({
+							'event': 'UAevent',
+							'eventCategory': 'user_behavior',
+							'eventAction': 'success_subscription_form',
+							'eventLabel': undefined
+							});" class="btn btn--violet form__submit">
 							Send
 						</button>
 
