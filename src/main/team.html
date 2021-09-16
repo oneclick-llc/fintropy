@@ -17,6 +17,7 @@
 
 	{
 		name : "Eugine Kolesnikoff",
+		gtm : "eugine_kolesnikoff",
 		status : "CEO",
 		text : '20+ years of experience in Finance and Venture Capital: <a href="/" onclick="return false" target="_blank" rel="noopener">AIG Brunswick Capital Management</a> and the <a href="/" onclick="return false" target="_blank" rel="noopener">IIDF</a>. Leadership role at Moscow Institute of Physics and Technology.',
 		photo: "kolesnikoff",
@@ -24,6 +25,7 @@
 	},
 	{
 		name : "Jonathan Austin",
+		gtm : "jonathan_austin",
 		status : "CTO",
 		text : '20+ years of software product experience: <a href="/" onclick="return false" target="_blank" rel="noopener">SAP</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">Oracle</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">IBM</a>. Participated in <a href="/" onclick="return false" target="_blank" rel="noopener">Morpheus Labs</a> and <a href="/" onclick="return false" target="_blank" rel="noopener">Quube Exchange</a>. Senior Consult at SME Digital Transformation and Capelle Consulting.',
 		photo: "austin",
@@ -31,6 +33,7 @@
 	},
 	{
 		name : "Zied Chaabane",
+		gtm : "zied_chaabane",
 		status : "CMO",
 		text : 'Has worked on 15+ cryptocurrency projects including <a href="/" onclick="return false" target="_blank" rel="noopener">Ideaology</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">Burency</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">2local</a>, and <a href="/" onclick="return false" target="_blank" rel="noopener">Pointpay</a>. Worked with <a href="/" onclick="return false" target="_blank" rel="noopener">Accenture</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">Honeywell</a>, <a href="/" onclick="return false" target="_blank" rel="noopener">Halliburton</a> and <a href="/" onclick="return false" target="_blank" rel="noopener">Emerson</a>. Executive MBA holder.',
 		photo: "chaabane",
@@ -38,6 +41,7 @@
 	},
 	{
 		name : "John Burmeister",
+		gtm : "john_burmeister",
 		status : "Partnership Lead",
 		text : '10+ experience  in the Global Payments industry: <a href="/" onclick="return false" target="_blank" rel="noopener">Western Union</a> and <a href="/" onclick="return false" target="_blank" rel="noopener">Monex Group</a>. Worked as LaunchPad Manager for <a href="/" onclick="return false" target="_blank" rel="noopener">YFDAI</a>, driving marketing strategy and partnerships.',
 		photo: "burmeister",
@@ -72,13 +76,11 @@
 							'event': 'UAevent',
 							'eventCategory': 'user_behavior',
 							'eventAction': 'click_team',
-							'eventLabel': 'click_team_' + `${item.name.toLowerCase()}`
+							'eventLabel': 'click_team_{{item.gtm}}'
 							});" target="_blank" rel="noopener nofollow" class="team__linkedin">
 							linkedIn {{ item.name }}
 						</a>
-
 					</div>
-
 					<div class="team__body">
 
 						<h3 class="team__name h3">
