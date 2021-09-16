@@ -1,43 +1,31 @@
-
-	<aside class="subscribe">
-
-		<div class="center">
-
-			<div class="subscribe__box">
-
-				<div class="subscribe__img fade-in fade-in--left">
-
-					<img src="/img/subscribe/pic.svg" alt="" width="381" height="390" loading="eager">
-
-				</div>
-
-				<form class="subscribe__form fade-in fade-in--right form" action="/api/subscribe" novalidate="novalidate" autocomplete="off">
-
-					<input type="hidden" value="Subscribe" name="subject">
-
-					<h3 class="subscribe__title h2">
-						Join our subscribers list to get the latest news, updates and announcements directly <br>in your inbox.
-					</h3>
-
-					<div class="subscribe__fieldset">
-
-						<input type="email" name="email" placeholder="Enter your email" aria-label="enter email" required="required" class="input input--invalid" autocomplete="off">
-
-						<button onclick="dataLayer.push({
+<aside class="subscribe">
+    <div class="center">
+        <div class="subscribe__box">
+            <div class="subscribe__img fade-in fade-in--left">
+                <img src="/img/subscribe/pic.svg" alt="" width="381" height="390" loading="eager">
+            </div>
+            <form class="subscribe__form fade-in fade-in--right form" action="https://fintropy.us5.list-manage.com/subscribe/post?u=3239992f87a658b4992177767&amp;id=bd51fe4d9f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" novalidate="novalidate" autocomplete="off">
+                <input type="hidden" value="Subscribe" name="subject">
+                <h3 class="subscribe__title h2">
+                    Join our subscribers list to get the latest news, updates and announcements directly <br>in your inbox.
+                </h3>
+                <div class="subscribe__fieldset">
+                    <input type="email" name="email" placeholder="Enter your email" aria-label="enter email" required="required" class="input input--invalid" autocomplete="off" id="mce-EMAIL">
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <button onclick="dataLayer.push({
 							'event': 'UAevent',
 							'eventCategory': 'user_behavior',
 							'eventAction': 'success_subscription_form',
 							'eventLabel': undefined
-							});" class="btn btn--violet form__submit">
-							Send
-						</button>
-
-					</div>
-
-				</form>
-
-			</div>
-
-		</div>
-
-	</aside>
+							});" class="btn btn--violet form__submit"
+							type="submit" id="mc-embedded-subscribe">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</aside>
