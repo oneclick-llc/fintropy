@@ -6,26 +6,26 @@
 
 		display: flex;
 		align-items: center;
+		justify-content: space-around;
 
 		@media ($desktop) {
 
-			width: 1440px;
+			width: 1940px;
 			padding: 58px 64px;
 
 		}
 
-		@media ($mdWidth) {
+		@media ($lgWidthFooter) {
 
-			align-items: flex-end;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-around;
 			padding-top: 38px;
 			padding-bottom: 38px;
 
 		}
 
 		@media ($smWidth) {
-
+			display: block;
 			align-items: center;
 			padding-bottom: 34px;
 
@@ -61,9 +61,16 @@
 
 	}
 
+	&__social {
+		@media ($smWidth) {
+
+			padding: 20px 0;
+
+		}
+	}
+
 	&__menu {
 
-		flex-grow: 1;
 
 		@media ($mdWidth) {
 
@@ -112,6 +119,9 @@
 		letter-spacing: -0.03em;
 		font-size: 14px;
 		color: rgba(255, 255, 255, 0.3);
+		position: relative;
+    	width: 190px;
+    	top: 10px;
 
 		@media ($mdWidth) {
 
