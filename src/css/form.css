@@ -159,6 +159,24 @@
 
 	}
 
+	&--whitelist {
+
+		color: rgba(255, 255, 255, .8);
+		background-color: #6F43BE;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--secondary);
+
+			}
+
+		}
+
+	}
+
 	&--white {
 
 		color: var(--accentSecondary);

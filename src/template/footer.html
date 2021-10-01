@@ -1,31 +1,25 @@
-	<footer class="footer">
+<footer class="footer">
+  <div class="center">
+    <div class="footer__logo">
+      <svg width="128" height="46" viewBox="0 0 128 46">
+        <use xlink:href="#logo" />
+      </svg>
+	  <p class="footer__copyright">Copyright © 2021 Fintropy Team</p>
+    </div>
 
-		<div class="center">
+    <div class="footer__menu">{% include "template/menu.html" %}</div>
 
-			<div class="footer__logo">
+    <div>
+      <a
+        href="https://epwxkcos5wa.typeform.com/to/Imyd1t3G."
+        target="_blank"
+        class="btn btn--whitelist"
+        rel="noopener nofollow"
+      >
+        Join Our Whitelist
+      </a>
+    </div>
 
-				<svg width="128" height="46" viewBox="0 0 128 46">
-					<use xlink:href="#logo"/>
-				</svg>
-
-			</div>
-
-			<div class="footer__menu">
-
-				{% include "template/menu.html" %}
-
-			</div>
-
-			<div class="footer__menu">
-
-				{% include "template/footer_social.html" %}
-				
-			</div>
-
-			<p class="footer__copyright">
-				Copyright © 2021 Fintropy Team
-			</p>
-
-		</div>
-
-	</footer>
+    <div class="footer__social">{% include "template/footer_social.html" %}</div>
+  </div>
+</footer>
