@@ -163,6 +163,12 @@
 
 		color: rgba(255, 255, 255, .8);
 		background-color: #6F43BE;
+		height: 50px;
+		line-height: 50px;
+		font-weight: 400;
+		width: 250px;
+		padding: 0px;
+		font-size: 18px;
 
 		@media ($desktop) {
 
