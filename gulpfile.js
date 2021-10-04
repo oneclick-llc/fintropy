@@ -59,7 +59,7 @@ try {
 
 gulp.task('html', () => {
 
-	return gulp.src('src/**/index.html')
+	return gulp.src('src/*.html')
 		.pipe(plumber())
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
@@ -186,7 +186,7 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', () => {
 
-	return gulp.src('src/**/index.html')
+	return gulp.src('src/*.html')
 		.pipe(nunjucksRender({
 			data: {
 				url: 'https://www.fintropy.io',

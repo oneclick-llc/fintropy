@@ -21,20 +21,10 @@
       </a>
     </div>
 
-    <nav class="header__menu">{% include "template/menu.html" %}</nav>
-    <div class="header__social">
-      <div >
-        <a
-          href="/whitelist.html"
-          class="btn btn--whitelist"
-          rel="noopener nofollow"
-        >
-          Join Our Whitelist
-        </a>
-      </div>
-      <nav class="header__social-links">{% include "template/social.html" %}</nav>
+    <nav class="header__menu">{% include "template/menu_whitelist.html" %}</nav>
+    <div class="header__social" style="top: 0px;">
+      <nav class="header__social-links" style="top: 0px;">{% include "template/social.html" %}</nav>
     </div>
-
     <button class="button btn-menu-toggle" type="button" aria-label="открыть меню">
       <span class="btn-menu-toggle__line btn-menu-toggle__line--top"></span>
       <span class="btn-menu-toggle__line btn-menu-toggle__line--center"></span>
