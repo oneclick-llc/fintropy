@@ -82,6 +82,7 @@
             overflow: hidden;
             border-radius: 34px;
             z-index: 1;
+            min-width: 250px;
 
             @media ($smWidth) {
 
