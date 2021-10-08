@@ -88,13 +88,47 @@
 
 	}
 
+	&__intro_deck {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 28px;
+		padding-top: 20px;
+
+		.a{
+			color: white;
+		}
+
+		@media ($mdWidth) {
+
+			margin-bottom: 54px;
+			padding-top: 0px;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 41px;
+			padding-top: 0px;
+
+			br {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
 	&__btns {
 
 		display: flex;
 
 		@media ($mdWidth) {
 
-			margin-bottom: 93px;
+			margin-bottom: 50px;
 
 		}
 
@@ -130,11 +164,12 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 100px;
+		bottom: 70px;
 
 		.center {
 
 			display: flex;
+			margin-top: 20px;
 
 		}
 
