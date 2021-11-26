@@ -1,5 +1,14 @@
+.top_info_block{
+	min-height: 40px;
+	width: 100%;
+	background-color:black;
+	padding: 5px 10px;
+	text-align: center;
+  margin-bottom: 10px;
+}
+
 .header {
-  padding: 41px 0;
+  padding: 0px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -7,7 +16,7 @@
   z-index: 1;
 
   @media ($smWidth) {
-    padding: 26px 0;
+    padding: 0px 0;
   }
 
   .center {
