@@ -1,37 +1,104 @@
-	<div class="modal" id="modal">
+<div class="modal" id="modal">
+  <div class="modal__box">
+    <div class="modal__item modal__item--video">
+      <div id="modal-video"></div>
+    </div>
 
-		<div class="modal__box">
+    <div class="modal__item modal__item--sushi">
+      <div class="modal-sushi-wrapper">
+        <button
+          type="button"
+          class="modal__close modal__close-btn button"
+          style="position: absolute; top: 10px; right: 20px"
+          aria-label="Close"
+        >
+          <svg width="30" height="30" viewBox="0 0 30 30">
+            <path stroke="#000" stroke-width="2" d="M28.58 28.58L1 1M1 28.58L28.58 1" />
+          </svg>
+        </button>
+        <div class="modal-sushi">
+          <h1>FINT token network</h1>
+          <p style="text-align: center">
+            Please, be sure that you switch the network to <b>"Polygon (Matic)"</b>, when swapping
+            the tokens on SUSHI
+          </p>
+          <p>FINT Token address:</p>
+          <div class="modal-sushi-block-address">
+            <div style="width: 100%">
+              <p
+                style="
+                  font-size: 10pt;
+                  margin: 10px 0 10px 0;
+                  word-wrap: break-word;
+                  padding: 0 10px;
+                "
+              >
+                0xD0513DB39d87e8825389fEB10BD911dC53B3a153
+              </p>
+            </div>
 
-			<div class="modal__item modal__item--video">
+            <div id="modal-sushi-container-btn">
+              <button
+                id="button--modal--sushi"
+                class="btn__modal__sushi"
+                style="background-color: transparent; border: 0"
+              >
+                <svg
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="35" height="35" rx="17.5" fill="#8000FF" fill-opacity="0.1" />
+                  <path
+                    d="M21.6667 13.3333V11.2499C21.6667 10.6974 21.4473 10.1675 21.0566 9.77679C20.6659 9.38609 20.1359 9.1666 19.5834 9.1666H11.2501C10.6975 9.1666 10.1676 9.38609 9.77694 9.77679C9.38624 10.1675 9.16675 10.6974 9.16675 11.2499V19.5833C9.16675 20.1358 9.38624 20.6657 9.77694 21.0564C10.1676 21.4471 10.6975 21.6666 11.2501 21.6666H13.3334"
+                    stroke="#8000FF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.7499 13.3334H15.4166C14.266 13.3334 13.3333 14.2661 13.3333 15.4167V23.7501C13.3333 24.9007 14.266 25.8334 15.4166 25.8334H23.7499C24.9005 25.8334 25.8333 24.9007 25.8333 23.7501V15.4167C25.8333 14.2661 24.9005 13.3334 23.7499 13.3334Z"
+                    stroke="#8000FF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="btn-goto-sushi">
+            <a
+              href="https://app.sushi.com/swap?outputCurrency=0xd0513db39d87e8825389feb10bd911dc53b3a153&inputCurrency=0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
+              onclick="dataLayer.push({
+												  'event': 'UAevent',
+												  'eventCategory': 'user_behavior',
+												  'eventAction': 'goto_sushi_buy_fint',
+												  'eventLabel': undefined
+												  });"
+              target="_blank"
+              class="btn btn--white"
+              rel="noopener nofollow"
+            >
+              <span> Go to Sushi </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-				<div id="modal-video"></div>
+    <aside class="modal__item modal__item--thank">
+      <h3 class="h2">Thank you!</h3>
 
-			</div>
+      <p>Your subscription has been successfully completed.</p>
 
-			<aside class="modal__item modal__item--thank">
-
-				<h3 class="h2">
-					Thank you!
-				</h3>
-
-				<p>
-					Your subscription has been successfully completed.
-				</p>
-
-				<button type="button" class="modal__close modal__close-btn button" aria-label="Close">
-					<svg width="22" height="22" viewBox="0 0 22 22">
-						<path stroke="#4F208A" stroke-width="2" d="M21 21L1 1M1 21L21 1"/>
-					</svg>
-				</button>
-
-			</aside>
-
-			<button type="button" class="modal__close modal__close-btn button" aria-label="Close">
-				<svg width="30" height="30" viewBox="0 0 30 30">
-					<path stroke="#848484" stroke-width="2" d="M28.58 28.58L1 1M1 28.58L28.58 1"/>
-				</svg>
-			</button>
-
-		</div>
-
-	</div>
+      <button type="button" class="modal__close modal__close-btn button" aria-label="Close">
+        <svg width="22" height="22" viewBox="0 0 22 22">
+          <path stroke="#4F208A" stroke-width="2" d="M21 21L1 1M1 21L21 1" />
+        </svg>
+      </button>
+    </aside>
+  </div>
+</div>
