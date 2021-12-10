@@ -1,177 +1,197 @@
 .modal {
+  flex-grow: 1;
+  position: relative;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 58px;
 
-	flex-grow: 1;
-	position: relative;
-	z-index: 10;
-	display: none;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	padding: 58px;
+  @media ($smWidth) {
+    padding: var(--indent);
+  }
 
-	@media ($smWidth) {
+  &__box {
+    position: relative;
+    max-width: 100%;
+  }
 
-		padding: var(--indent);
+  &.is-video &__box {
+    position: static;
+  }
 
-	}
+  &__item {
+    max-width: 100%;
+    position: relative;
 
-	&__box {
+    &--thank {
+      width: 544px;
+      border-radius: 20px;
+      text-align: center;
+      background-color: var(--secondary);
+      padding: 83px;
 
-		position: relative;
-		max-width: 100%;
+      @media ($smWidth) {
+        padding: 52px 48px 40px;
+        width: 360px;
 
-	}
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin: 10px auto 0;
+          max-width: 256px;
+        }
+      }
 
-	&.is-video &__box {
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 17px auto 3px;
+        max-width: 300px;
+      }
+    }
 
-		position: static;
+    &--sushi {
+      height: 100%;
+      width: 630px;
+      padding: 0 10px;
+      @media ($mdWidth) {
+        height: 100%;
+        width: 100%;
+      }
+      @media ($smWidth) {
+        left: 0px;
+        height: 100%;
+        width: 100%;
+      }
+    }
 
-	}
+    &i--sushi--buttom {
+      left: 2px;
+    }
 
-	&__item {
+    &--video {
+      width: 1064px;
+      height: 594px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 90%;
+      max-height: 90%;
 
-		max-width: 100%;
-		position: relative;
+      @media ($smWidth) {
+        width: 560px;
+        height: 315px;
+      }
 
-		&--thank {
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        border: 0;
+        background-color: #000;
+      }
+    }
+  }
 
-			width: 544px;
-			border-radius: 20px;
-			text-align: center;
-			background-color: var(--secondary);
-			padding: 83px;
+  &__item--thank &__close-btn {
+    top: 30px;
+    right: 28px;
+  }
 
-			@media ($smWidth) {
+  &__item--thank:not(.visuallyhidden) ~ &__close-btn {
+    display: none;
+  }
 
-				padding: 52px 48px 40px;
-				width: 360px;
+  &__close-btn {
+    position: absolute;
+    top: var(--indent);
+    right: var(--indent);
 
-				p {
+    @media ($mdWidth) {
+      --indent: 16px;
+    }
 
-					font-size: 16px;
-					line-height: 22px;
-					margin: 10px auto 0;
-					max-width: 256px;
+    svg {
+      fill: none;
+    }
+  }
 
-				}
+  .modal-sushi-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    color: white;
 
-			}
+    .btn-goto-sushi {
+      display: flex;
+      margin-top: 20px;
+      justify-content: center;
 
-			p {
+      @media ($smWidth) {
+        margin-left: 0px;
+        .btn {
+          width: 100%;
+        }
+      }
+      @media ($mdWidth) {
+        margin-left: 0px;
+      }
+    }
+  }
 
-				font-size: 20px;
-				line-height: 24px;
-				margin: 17px auto 3px;
-				max-width: 300px;
+  .modal-sushi-block-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-			}
+    @media (min-width > 359px) {
+        width: 100%;
+    }
+  }
 
-		}
-
-		&--video {
-
-			width: 1064px;
-			height: 594px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			max-width: 90%;
-			max-height: 90%;
-
-			@media ($smWidth) {
-
-				width: 560px;
-				height: 315px;
-
-			}
-
-			iframe {
-
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				object-fit: contain;
-				border: 0;
-				background-color: #000;
-
-			}
-
-		}
-
-	}
-
-	&__item--thank &__close-btn {
-
-		top: 30px;
-		right: 28px;
-
-	}
-
-	&__item--thank:not(.visuallyhidden) ~ &__close-btn {
-
-		display: none;
-
-	}
-
-	&__close-btn {
-
-		position: absolute;
-		top: var(--indent);
-		right: var(--indent);
-
-		@media ($mdWidth) {
-
-			--indent: 16px;
-
-		}
-
-		svg {
-
-			fill: none;
-
-		}
-
-	}
-
+  .modal-sushi {
+    width: 100%;
+  }
 }
 
 .modal-show {
+  .modal {
+    display: flex;
+  }
 
-	.modal {
+  .wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
 
-		display: flex;
-
-	}
-
-	.wrapper {
-
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		overflow: hidden;
-		pointer-events: none;
-
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			z-index: 9;
-			opacity: .8;
-			background-color: #000;
-
-		}
-
-	}
-
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      z-index: 9;
+      opacity: 0.8;
+      background-color: #000;
+    }
+  }
 }

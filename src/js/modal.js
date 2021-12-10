@@ -1,74 +1,58 @@
-( modal => {
+((modal) => {
+  if (!modal) {
+    return;
+  }
 
-	if(!modal) {
+  const items = modal.querySelectorAll('.modal__item'),
+    btns = document.querySelectorAll('[data-modal]'),
+    wrapper = document.querySelector('.wrapper');
 
-		return;
+  let activeModal = null,
+    windowScroll = window.pageYOffset;
 
-	}
+  modal.addEventListener('hide', () => {
+    document.body.classList.remove('modal-show');
+    wrapper.style.top = 0;
+    window.scrollTo(0, windowScroll);
+    activeModal = false;
 
-	const items = modal.querySelectorAll('.modal__item'),
-		  btns = document.querySelectorAll('[data-modal]'),
-		  wrapper = document.querySelector('.wrapper');
+    setTimeout(() => document.documentElement.classList.remove('scroll-behavior-off'));
 
-	let activeModal = null,
-		windowScroll = window.pageYOffset;
+    // clear video
+    document.getElementById('modal-video').innerHTML = '';
+  });
 
-	modal.addEventListener('hide', () => {
+  const modalShow = (selector) => {
+    document.documentElement.classList.add('scroll-behavior-off');
 
-		document.body.classList.remove('modal-show');
-		wrapper.style.top = 0;
-		window.scrollTo(0,windowScroll);
-		activeModal = false;
+    if (!activeModal) {
+      windowScroll = window.pageYOffset;
+    }
 
-		setTimeout( ()=> document.documentElement.classList.remove('scroll-behavior-off'));
+    activeModal = modal.querySelector('.modal__item--' + selector);
 
-		// clear video
-		document.getElementById('modal-video').innerHTML = '';
+    modal.classList.toggle('is-video', selector === 'video');
 
-	});
+    Array.from(items, (el) => el.classList.toggle('visuallyhidden', el !== activeModal));
 
-	const modalShow = selector => {
+    wrapper.style.top = -windowScroll + 'px';
+    document.body.classList.add('modal-show');
+    window.scrollTo(0, 0);
 
-		document.documentElement.classList.add('scroll-behavior-off');
+    activeModal.focus();
+  };
 
-		if(!activeModal){
+  modal.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal') || event.target.closest('.modal__close')) {
+      if (event.target.closest('[data-modal]') === null) {
+        modal.dispatchEvent(new CustomEvent('hide'));
+      }
+    }
+  });
 
-			windowScroll = window.pageYOffset;
+  Array.from(btns, (btn) =>
+    btn.addEventListener('click', () => modalShow(btn.getAttribute('data-modal')))
+  );
 
-		}
-
-		activeModal = modal.querySelector('.modal__item--' + selector);
-
-		modal.classList.toggle('is-video', selector === 'video');
-
-		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
-
-		wrapper.style.top = -windowScroll + 'px';
-		document.body.classList.add('modal-show');
-		window.scrollTo(0,0);
-
-		activeModal.focus();
-
-	};
-
-	modal.addEventListener('click', event => {
-
-		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
-
-			if(event.target.closest('[data-modal]') === null) {
-
-				modal.dispatchEvent(new CustomEvent("hide"));
-
-			}
-
-		}
-
-	});
-
-	Array.from(btns, btn =>
-		btn.addEventListener('click', () =>
-			modalShow(btn.getAttribute('data-modal'))));
-
-	modal.addEventListener('modalShow', event => modalShow(event.detail.selector));
-
+  modal.addEventListener('modalShow', (event) => modalShow(event.detail.selector));
 })(document.querySelector('.modal'));
