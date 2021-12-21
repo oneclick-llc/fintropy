@@ -20,7 +20,7 @@
           <h1>FINT token network</h1>
           <p style="text-align: center">
             Please, be sure that you switch the network to <b>"Polygon (Matic)"</b>, when swapping
-            the tokens on SUSHI
+            the tokens on SUSHI or 1inch
           </p>
           <p>FINT Token address:</p>
           <div class="modal-sushi-block-address">
@@ -69,6 +69,7 @@
               </button>
             </div>
           </div>
+          <div class="flex flex-col md:flex-row justify-around">
           <div class="btn-goto-sushi">
             <a
               href="https://app.sushi.com/swap?outputCurrency=0xd0513db39d87e8825389feb10bd911dc53b3a153&inputCurrency=0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
@@ -84,6 +85,23 @@
             >
               <span> Go to Sushi </span>
             </a>
+          </div>
+          <div class="btn-goto-sushi">
+            <a
+              href="https://app.1inch.io/#/137/swap/USDC/0xD0513DB39d87e8825389fEB10BD911dC53B3a153"
+              onclick="dataLayer.push({
+												  'event': 'UAevent',
+												  'eventCategory': 'user_behavior',
+												  'eventAction': 'goto_sushi_buy_fint',
+												  'eventLabel': undefined
+												  });"
+              target="_blank"
+              class="btn btn--white"
+              rel="noopener nofollow"
+            >
+              <span> Go to 1inch </span>
+            </a>
+          </div>
           </div>
         </div>
       </div>
