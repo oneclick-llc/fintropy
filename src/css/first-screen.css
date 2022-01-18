@@ -96,6 +96,7 @@
 
 		.a{
 			color: white;
+			text-decoration-line: underline;
 		}
 
 		@media ($mdWidth) {
