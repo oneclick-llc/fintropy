@@ -127,17 +127,17 @@
 
 	}
 
-	&__row--q4-2021 &__thead {
+	&__row--q1-2022 &__thead {
 
 		color: var(--accentPrimary);
 
 		&::after {
 
-			width: 66px;
+			width: 33px;
 
 			@media ($mdWidth) {
 
-				width: 36px;
+				width: 18px;
 
 			}
 
@@ -145,15 +145,15 @@
 
 	}
 
-	&__row--q4-2021 &__tbody {
+	&__row--q1-2022 &__tbody {
 
 		background-color: var(--accentSecondary);
 
 	}
 
+	&__row--q4-2021 &__thead::after,
 	&__row--q3-2021 &__thead::after,
-	&__row--q2-2021 &__thead::after,
-	&__row--q1-2022 &__thead::after {
+	&__row--q2-2021 &__thead::after {
 
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='5' viewBox='0 0 33 5'%3E%3Crect width='25' height='5' fill='%239D60FF' rx='2.5'/%3E%3C/svg%3E");
 
