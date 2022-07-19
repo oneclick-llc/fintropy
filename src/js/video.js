@@ -9,8 +9,9 @@
 			const iframe = document.createElement('iframe');
 
 			iframe.setAttribute('allowfullscreen','allowfullscreen');
+			iframe.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
 
-			iframe.src = 'https://www.youtube.com/embed/' + btn.getAttribute('data-id') + '?autoplay=1';
+			iframe.src = 'https://player.vimeo.com/video/' + btn.getAttribute('data-id') + '?h=edfd813836';
 
 			document.getElementById('modal-video').appendChild(iframe);
 
